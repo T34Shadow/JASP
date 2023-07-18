@@ -1,35 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStarShipController : MonoBehaviour
 {
     [Header("ShipMovementProperties")]
+
     [SerializeField] private float forwardFactor;
     [SerializeField] private float topForwardSpeed;
     [SerializeField] private float brakeFactor;
+
     [SerializeField] private float boostFactor;
     [SerializeField] private float topBoostSpeed;
 
-    [SerializeField] private float leftStrafeFactor;
-    [SerializeField] private float rightStrafeFactor;
+    [SerializeField] private float StrafeFactor;
+    [SerializeField] private float pitchFactor;
+    [SerializeField] private float rollFactor;
+    [SerializeField] private float yawFactor;
+    
 
-    [SerializeField] private float pitchUpFactor;
-    [SerializeField] private float pitchDownFactor;
+    [Header("CamearProperties")]
 
-    [SerializeField] private float rollLeftFactor;
-    [SerializeField] private float rollRightFactor;
+    [SerializeField] private float xRotation;
+    [SerializeField] private float yRotation;
+    [SerializeField] private float zRotation;
 
-    [SerializeField] private float yawLeftFactor;
-    [SerializeField] private float yawRightFactor;
+    // [Header("AutoBlasterProperties")]
+    //
+    // [Header("SemiBlasterProperties")]
 
-   // [Header("CamearProperties")]
-   //
-   // [Header("AutoBlasterProperties")]
-   //
-   // [Header("SemiBlasterProperties")]
-
-
+    //Other vaules
+    private float axisZ;
 
     // Start is called before the first frame update
     void Start()
@@ -43,35 +45,56 @@ public class PlayerStarShipController : MonoBehaviour
     void Update()
     {
 
+        //Keybord Input controls
         bool forwardInput = Input.GetKey(KeyCode.W);
         bool brakeInput = Input.GetKey(KeyCode.S);
 
+        bool rightStrafeInput = Input.GetKey(KeyCode.D);
+        bool leftStrafeInput = Input.GetKey(KeyCode.A);
+
+        bool rightRoleInput = Input.GetKey(KeyCode.E);
+        bool leftRoleInput = Input.GetKey(KeyCode.Q);
+
         if (forwardInput)
         {
-
+            float Vel = forwardFactor * Time.deltaTime;
+            Vector3 movement = new(0, 0, Vel);
+            transform.Translate(movement);
         }
-        
-        
-        
-        
-        
-        //cam movemnt when in free look mode
-       // (if)
-       // {
-       //     //Turret Rotaion with mouse on camear
-       //
-       //     // get mouse input 
-       //     float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-       //     float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
-       //
-       //     yRotation += mouseX;
-       //     xRotation -= mouseY;
-       //
-       //     // rotate cam and orientaion
-       //     turretRing.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-       //     orientation.rotation = Quaternion.Euler(0, yRotation, 0);
-       // }
+        if (rightStrafeInput)
+        {
+            float vel = StrafeFactor * Time.deltaTime;
+            Vector3 movement = new(vel, 0, 0);
+            transform.Translate(movement);
+        }
+        if (leftStrafeInput)
+        {
+            float vel = StrafeFactor * Time.deltaTime;
+            Vector3 movement = new(-vel, 0, 0);
+            transform.Translate(movement);
+        }
 
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * yawFactor;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * pitchFactor;
+
+        if(rightRoleInput)
+        {
+            float rollRight =- 1 * Time.deltaTime * rollFactor;
+            axisZ = rollRight;
+        }
+        else
+        {
+            axisZ = 0;
+        }
+        if(leftRoleInput)
+        {
+            float rollLeft =+ 1 * Time.deltaTime * rollFactor;
+            axisZ = rollLeft;
+        }
+        yRotation += mouseX;
+        xRotation -= mouseY;
+        zRotation += axisZ;
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, zRotation);
 
     }
 }
