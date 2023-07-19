@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &953629770846031414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4104322815390064592}
+  m_Layer: 0
+  m_Name: spawnlazerbolt (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4104322815390064592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953629770846031414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65, y: 0, z: 1.632}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3965191484501683188}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028741265944625619
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,6 +100,10 @@ Transform:
   - {fileID: 264883347795421672}
   - {fileID: 4699147918072141503}
   - {fileID: 3693836846759188359}
+  - {fileID: 6647904914378163155}
+  - {fileID: 4104322815390064592}
+  - {fileID: 6320392547359105610}
+  - {fileID: 69431822213461458}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115,12 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipRigidbody: {fileID: 7821928635736028866}
-  shipVelcoity: {x: 0, y: 0, z: 0}
-  forwardFactor: 5
-  brakeFactor: 0.5
-  rollFactor: 0.5
-  pitchFactor: 0.5
-  yawFactor: 0.5
+  forwardFactor: 20
+  brakeFactor: 3
+  rollFactor: 0.2
+  pitchFactor: 0.2
+  yawFactor: 0.2
   centerOrigin: {fileID: 3693836846759188359}
   frontPitchOrigin: {fileID: 5744746047752707990}
   backPitchOrigin: {fileID: 7939449963692175065}
@@ -128,6 +162,74 @@ MonoBehaviour:
   backYawOrigin: {fileID: 7939449963692175065}
   rightRollOrigin: {fileID: 264883347795421672}
   leftRollOrigin: {fileID: 4699147918072141503}
+  lazerBolt: {fileID: 6076619160937445059, guid: 56605417aca486b4ba4d33d003aa63ce, type: 3}
+  cannonBolt: {fileID: 4675200807118455188, guid: 332416e2e5c19984995e396dafd6f8e9, type: 3}
+  mine: {fileID: 6273507529747834000, guid: a7d65262a84c69446925b3ee702926cb, type: 3}
+  spawnPointLazerBolt: {fileID: 0}
+  spawnPointcannonBolt: {fileID: 0}
+  spawnPointMine: {fileID: 0}
+--- !u!1 &2646078549921252533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6647904914378163155}
+  m_Layer: 0
+  m_Name: spawnlazerbolt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6647904914378163155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646078549921252533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65, y: 0, z: 1.632}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3965191484501683188}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3934463614782063567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6320392547359105610}
+  m_Layer: 0
+  m_Name: spawnCannonBolt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6320392547359105610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934463614782063567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.453, z: 2.242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3965191484501683188}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4243599743550010829
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +402,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6194071340403595397}
   m_Enabled: 1
+--- !u!1 &6390658194414101772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69431822213461458}
+  m_Layer: 0
+  m_Name: spawnMine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69431822213461458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390658194414101772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.372, z: -3.487}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3965191484501683188}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6457475106882723114
 GameObject:
   m_ObjectHideFlags: 0

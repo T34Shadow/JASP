@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipContorllorV2 : MonoBehaviour
 {
     [SerializeField] private Rigidbody shipRigidbody;
-    public Vector3 shipVelcoity;
+    private Vector3 shipVelcoity;
     [Header("MovmentValues")]
 
     [SerializeField] private float forwardFactor;
@@ -26,7 +26,18 @@ public class ShipContorllorV2 : MonoBehaviour
     [SerializeField] private Transform rightRollOrigin;
     [SerializeField] private Transform leftRollOrigin;
 
- 
+    [Header("weapons")]
+    [SerializeField] private GameObject lazerBolt;
+    [SerializeField] private GameObject cannonBolt;
+    [SerializeField] private GameObject mine;
+
+    [Header("weaponsPrperties")]
+    [SerializeField] private Transform spawnPointLazerBoltRight;
+    [SerializeField] private Transform spawnPointLazerBoltLeft;
+    [SerializeField] private Transform spawnPointcannonBolt;
+    [SerializeField] private Transform spawnPointMine;
+
+
 
     // Start is called before the first frame update
     public void Start()
@@ -137,15 +148,17 @@ public class ShipContorllorV2 : MonoBehaviour
 
         if(shootInput & miniGunActive)
         {
-
+            GameObject cloneLazerBoltLeft = Instantiate(lazerBolt, spawnPointLazerBoltLeft.position, spawnPointLazerBoltLeft.rotation);
+            GameObject cloneLazerBoltRight = Instantiate(lazerBolt, spawnPointLazerBoltRight.position, spawnPointLazerBoltRight.rotation);
+               
         }
         if (shootInput & blasterCannonActive)
         {
-
+            GameObject cloneCannonBolt = Instantiate(cannonBolt, spawnPointcannonBolt.position, spawnPointcannonBolt.rotation);
         }
         if (shootInput & minesActive)
         {
-
+            GameObject cloneMine = Instantiate(mine, spawnPointMine.position, spawnPointMine.rotation);
         }
 
 
