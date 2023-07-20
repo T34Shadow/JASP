@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShipContorllorV2 : MonoBehaviour
@@ -37,11 +36,18 @@ public class ShipContorllorV2 : MonoBehaviour
     [SerializeField] private Transform spawnPointcannonBolt;
     [SerializeField] private Transform spawnPointMine;
 
+    [Header("CameraPrperties")]
+    [SerializeField] private Camera playerCam;
+    [SerializeField] private float StartFOV;
+    [SerializeField] private float EndFOV;
 
+
+    int selectedWeapon = 1;
 
     // Start is called before the first frame update
     public void Start()
     {
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -80,8 +86,12 @@ public class ShipContorllorV2 : MonoBehaviour
         {
             shipVelcoity.z = 0;
         }
+        if (bootsInput)
+        {
+            shipRigidbody.AddForce(centerOrigin.transform.forward * forwardFactor, ForceMode.Impulse);
+        }
         //pitch controll
-        if(pitchUpInput)
+        if (pitchUpInput)
         {
             shipRigidbody.AddTorque(-frontPitchOrigin.transform.right * pitchFactor, ForceMode.Impulse);
         }
@@ -108,7 +118,6 @@ public class ShipContorllorV2 : MonoBehaviour
         {
             shipRigidbody.AddTorque(-frontYawOrigin.transform.up * yawFactor, ForceMode.Impulse);
         }
-
     }
 
     // Update is called once per frame
@@ -117,36 +126,47 @@ public class ShipContorllorV2 : MonoBehaviour
 
         //player attacking
 
-        
-        bool shootInput = Input.GetKey(KeyCode.Space);
-        bool miniGun = Input.GetKey(KeyCode.Alpha1);
-        bool blasterCannon = Input.GetKey(KeyCode.Alpha2);
-        bool mines = Input.GetKey(KeyCode.Alpha3);
 
+        bool shootInput = Input.GetKey(KeyCode.Space);
+        
         bool miniGunActive = false;
         bool blasterCannonActive = false;
         bool minesActive = false;
 
-        if (miniGun)
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            selectedWeapon = 1;
+        }
+        else if (Input.GetKey(KeyCode.Alpha2))
+        {
+            selectedWeapon = 2;
+        }
+        else if (Input.GetKey(KeyCode.Alpha3))
+        {
+            selectedWeapon = 3;
+        }
+
+        if (selectedWeapon == 1)
         {
             miniGunActive = true;
             blasterCannonActive = false;
             minesActive = false;
         }
-        if (blasterCannon)
+        else if (selectedWeapon == 2)
         {
             blasterCannonActive = true;
             miniGunActive = false;
             minesActive = false;
         }
-        if (mines)
+        else if (selectedWeapon == 3)
         {
             minesActive = true;
             blasterCannonActive = false;
             miniGunActive = false;
         }
 
-        if(shootInput & miniGunActive)
+        //Shooting weapons
+        if (shootInput & miniGunActive)
         {
             GameObject cloneLazerBoltLeft = Instantiate(lazerBolt, spawnPointLazerBoltLeft.position, spawnPointLazerBoltLeft.rotation);
             GameObject cloneLazerBoltRight = Instantiate(lazerBolt, spawnPointLazerBoltRight.position, spawnPointLazerBoltRight.rotation);

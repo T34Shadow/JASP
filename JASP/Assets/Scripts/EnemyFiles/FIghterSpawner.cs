@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pojectiles : MonoBehaviour
+public class FIghterSpawner : MonoBehaviour
 {
-    [SerializeField] private float forwardSpeed;
-    [SerializeField] private float rotaionSpeed;
-    
     // Start is called before the first frame update
     void Start()
     {
