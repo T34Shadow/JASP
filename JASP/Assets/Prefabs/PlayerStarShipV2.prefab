@@ -139,7 +139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589589011447783670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.25, y: 0, z: -0.3}
+  m_LocalPosition: {x: -2.25, y: 0, z: -0.621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669966416149465893}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: -3.273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3432788091523862123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.8, z: 0.732}
+  m_LocalPosition: {x: 0.05, y: 0.8, z: -0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -331,6 +331,18 @@ MonoBehaviour:
   spawnPointLazerBoltLeft: {fileID: 4774138547505811179}
   spawnPointcannonBolt: {fileID: 1977516959874555719}
   spawnPointMine: {fileID: 4241200712484971120}
+  timerBtwFireLazer: 0
+  timerLazer: 0
+  canFireLazer: 0
+  timerBtwFireBlaster: 5
+  timerBlaster: 0
+  canFireBlaster: 0
+  timerBtwFireMines: 10
+  timerMines: 0
+  canFireMines: 0
+  playerCam: {fileID: 0}
+  StartFOV: 0
+  EndFOV: 0
 --- !u!1 &6561773632205305641
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6561773632205305641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.25, y: 0, z: -0.3}
+  m_LocalPosition: {x: 2.25, y: 0, z: -0.621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,7 +541,7 @@ PrefabInstance:
     - target: {fileID: -4276728729899295084, guid: 732da74500a5ae94eb5834a8927f1f5f, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: f17206af0b645534b89e531c366379f9, type: 2}
+      objectReference: {fileID: 2100000, guid: b1129d657b9b3a74685bbe301c6a27d9, type: 2}
     - target: {fileID: -2859109400176981367, guid: 732da74500a5ae94eb5834a8927f1f5f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -537,7 +549,7 @@ PrefabInstance:
     - target: {fileID: -2859109400176981367, guid: 732da74500a5ae94eb5834a8927f1f5f, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 4c48f6a89d50c9346b5c48b39fd7a29c, type: 2}
+      objectReference: {fileID: 2100000, guid: 90343656b2eefaf4c895c930bd494499, type: 2}
     - target: {fileID: -2859109400176981367, guid: 732da74500a5ae94eb5834a8927f1f5f, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 

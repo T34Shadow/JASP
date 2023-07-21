@@ -30,16 +30,33 @@ public class ShipContorllorV2 : MonoBehaviour
     [SerializeField] private GameObject cannonBolt;
     [SerializeField] private GameObject mine;
 
-    [Header("weaponsPrperties")]
+    [Header("weaponsProperties")]
     [SerializeField] private Transform spawnPointLazerBoltRight;
     [SerializeField] private Transform spawnPointLazerBoltLeft;
     [SerializeField] private Transform spawnPointcannonBolt;
     [SerializeField] private Transform spawnPointMine;
+    //cooldonw between fire, lazer gun, blaster cannon, and mines
 
-    [Header("CameraPrperties")]
+    
+    //Lazer Gun properties
+    [SerializeField] private float timerBtwFireLazer;
+    [SerializeField] private float timerLazer;
+    [SerializeField] private bool canFireLazer;
+    //Blaster cannon properties
+    [SerializeField] private float timerBtwFireBlaster;
+    [SerializeField] private float timerBlaster;
+    [SerializeField] private bool canFireBlaster;
+    //Mines properties
+    [SerializeField] private float timerBtwFireMines;
+    [SerializeField] private float timerMines;
+    [SerializeField] private bool canFireMines;
+
+    [Header("CameraProperties")]
     [SerializeField] private Camera playerCam;
     [SerializeField] private float StartFOV;
     [SerializeField] private float EndFOV;
+
+
 
 
     int selectedWeapon = 1;
@@ -57,6 +74,7 @@ public class ShipContorllorV2 : MonoBehaviour
         
     }
 
+    //using fixed update for player movement and controls
     public void FixedUpdate()
     {
         
@@ -125,8 +143,6 @@ public class ShipContorllorV2 : MonoBehaviour
     {
 
         //player attacking
-
-
         bool shootInput = Input.GetKey(KeyCode.Space);
         
         bool miniGunActive = false;
@@ -165,24 +181,50 @@ public class ShipContorllorV2 : MonoBehaviour
             miniGunActive = false;
         }
 
-        //Shooting weapons
-        if (shootInput & miniGunActive)
+        if(!canFireLazer)
         {
+            timerLazer += Time.deltaTime;
+            if(timerLazer > timerBtwFireLazer)
+            {
+                canFireLazer = true;
+                timerLazer = 0;
+            }
+        }
+        if (!canFireBlaster)
+        {
+            timerBlaster += Time.deltaTime;
+            if (timerBlaster > timerBtwFireBlaster)
+            {
+                canFireBlaster = true;
+                timerBlaster = 0;
+            }
+        }
+        if (!canFireMines)
+        {
+            timerMines += Time.deltaTime;
+            if (timerMines > timerBtwFireMines)
+            {
+                canFireMines = true;
+                timerMines = 0;
+            }
+        }
+        //Shooting weapons
+        if (shootInput & miniGunActive & canFireLazer)
+        {
+            canFireLazer = false;
             GameObject cloneLazerBoltLeft = Instantiate(lazerBolt, spawnPointLazerBoltLeft.position, spawnPointLazerBoltLeft.rotation);
             GameObject cloneLazerBoltRight = Instantiate(lazerBolt, spawnPointLazerBoltRight.position, spawnPointLazerBoltRight.rotation);
                
         }
-        if (shootInput & blasterCannonActive)
+        if (shootInput & blasterCannonActive & canFireBlaster)
         {
+            canFireBlaster = false;
             GameObject cloneCannonBolt = Instantiate(cannonBolt, spawnPointcannonBolt.position, spawnPointcannonBolt.rotation);
         }
-        if (shootInput & minesActive)
+        if (shootInput & minesActive & canFireMines)
         {
+            canFireMines = false;
             GameObject cloneMine = Instantiate(mine, spawnPointMine.position, spawnPointMine.rotation);
         }
-
-
-
-
     }
 }
