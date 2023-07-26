@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1665373607822703542}
-  - component: {fileID: 9098575285170203631}
-  - component: {fileID: 4984378967793659644}
+  - component: {fileID: 7206765541581560586}
   m_Layer: 0
   m_Name: EnemyDroneV02
   m_TagString: Untagged
@@ -35,23 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &9098575285170203631
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068704379264844234}
-  serializedVersion: 2
-  m_Mass: 0.1
-  m_Drag: 2
-  m_AngularDrag: 0.5
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4984378967793659644
+--- !u!114 &7206765541581560586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,13 +43,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068704379264844234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e3734c9fe035e439475248ad04da35, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a9fb7c0d27e23946afad97196d76904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  player: {fileID: 5309221150747967096, guid: 4118afa966670fb4db68f75ed60aa35a, type: 3}
-  bulletPrefab: {fileID: 0}
-  TotalScore: 0
+  velocity: {x: 0, y: 0, z: 0}
+  cohesionRadius: 20
+  cohesionForce: 2
+  alignmentRadius: 15
+  alignmentForce: 2
+  separationRadius: 10
+  separationForce: 2
+  maxVelocity: 15
+  drone: {fileID: 7206765541581560586}
 --- !u!1 &1667704844832229277
 GameObject:
   m_ObjectHideFlags: 0
