@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1995904014223943504}
   m_Layer: 0
   m_Name: CannonBolt
-  m_TagString: Untagged
+  m_TagString: Projectiels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
