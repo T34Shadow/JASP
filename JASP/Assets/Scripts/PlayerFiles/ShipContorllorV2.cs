@@ -5,6 +5,7 @@ public class ShipContorllorV2 : MonoBehaviour
 {
     [SerializeField] private Rigidbody shipRigidbody;
     private Vector3 shipVelcoity;
+    
     [Header("MovmentValues")]
 
     [SerializeField] private float forwardFactor;
@@ -55,6 +56,12 @@ public class ShipContorllorV2 : MonoBehaviour
     [SerializeField] private Camera playerCam;
     [SerializeField] private float StartFOV;
     [SerializeField] private float EndFOV;
+
+    [Header("playerProperties")]
+    [SerializeField] public float health;
+    [SerializeField] public float damage;
+
+    
 
 
 
@@ -141,6 +148,7 @@ public class ShipContorllorV2 : MonoBehaviour
     // Update is called once per frame
    public void Update()
     {
+        
 
         //player attacking
         bool shootInput = Input.GetKey(KeyCode.Space);
