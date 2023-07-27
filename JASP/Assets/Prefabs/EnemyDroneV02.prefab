@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1665373607822703542}
   - component: {fileID: 7206765541581560586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyDroneV02
-  m_TagString: Untagged
+  m_TagString: Drones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,14 +47,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  cohesionRadius: 20
-  cohesionForce: 2
-  alignmentRadius: 15
-  alignmentForce: 2
-  separationRadius: 10
-  separationForce: 2
-  maxVelocity: 15
+  radius: 50
+  cohesionRadius: 10
+  cohesionForce: 30
+  alignmentRadius: 10
+  alignmentForce: 30
+  separationRadius: 5
+  separationForce: 1
+  maxVelocity: 30
   drone: {fileID: 7206765541581560586}
+  player: {fileID: 3906349326265120900, guid: 4118afa966670fb4db68f75ed60aa35a, type: 3}
 --- !u!1 &1667704844832229277
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +68,7 @@ GameObject:
   - component: {fileID: 5162015461341646942}
   - component: {fileID: 6401290928558820034}
   - component: {fileID: 1827580920609104383}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mainthruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +152,7 @@ GameObject:
   - component: {fileID: 6806920410869211797}
   - component: {fileID: 7971749703753167451}
   - component: {fileID: 7739781531705604983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3469336397858805911}
   - component: {fileID: 4210705213106693178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +330,7 @@ GameObject:
   - component: {fileID: 9023276726473764578}
   - component: {fileID: 2476198194317022204}
   - component: {fileID: 8189727553856074761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DTV_thrustVectors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +413,7 @@ GameObject:
   - component: {fileID: 2318190794821770670}
   - component: {fileID: 4916171833220445831}
   - component: {fileID: 5244463457619927206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTrusters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +497,7 @@ GameObject:
   - component: {fileID: 4524075765749986503}
   - component: {fileID: 1103969774742172805}
   - component: {fileID: 945171870313591470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Guns1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +582,7 @@ GameObject:
   - component: {fileID: 1912015066375325405}
   - component: {fileID: 2390683975235285933}
   - component: {fileID: 6518683484692269311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +679,7 @@ GameObject:
   - component: {fileID: 3505988615362250702}
   - component: {fileID: 2111369976841526579}
   - component: {fileID: 8504956734828440130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8765106064408938164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DroneV02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +803,7 @@ GameObject:
   - component: {fileID: 3374749278708960957}
   - component: {fileID: 6738956929587811961}
   - component: {fileID: 7961064342294798971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
