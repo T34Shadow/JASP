@@ -57,10 +57,6 @@ public class ShipContorllorV2 : MonoBehaviour
     [SerializeField] private float StartFOV;
     [SerializeField] private float EndFOV;
 
-    [Header("playerProperties")]
-    [SerializeField] public float health;
-    [SerializeField] public float damage;
-
     
 
 

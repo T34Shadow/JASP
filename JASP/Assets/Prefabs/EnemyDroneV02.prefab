@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665373607822703542}
   - component: {fileID: 7206765541581560586}
+  - component: {fileID: 6175200119883769465}
   m_Layer: 6
   m_Name: EnemyDroneV02
   m_TagString: Drones
@@ -57,6 +58,21 @@ MonoBehaviour:
   maxVelocity: 30
   drone: {fileID: 7206765541581560586}
   player: {fileID: 3906349326265120900, guid: 4118afa966670fb4db68f75ed60aa35a, type: 3}
+  toThePlayerForce: 0
+--- !u!114 &6175200119883769465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068704379264844234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c81fcec16eae447a13a7299a864969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 20
 --- !u!1 &1667704844832229277
 GameObject:
   m_ObjectHideFlags: 0

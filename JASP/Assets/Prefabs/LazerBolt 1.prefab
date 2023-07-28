@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1964444052582874004
+--- !u!1 &2312720725538363264
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 271236897630720942}
-  - component: {fileID: 8527907569750752132}
+  - component: {fileID: 472384986939068248}
+  - component: {fileID: 7798519348088335319}
   m_Layer: 0
-  m_Name: Area Light (2)
+  m_Name: Area Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &271236897630720942
+--- !u!4 &472384986939068248
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964444052582874004}
+  m_GameObject: {fileID: 2312720725538363264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.08}
+  m_LocalPosition: {x: 0, y: 0, z: -0.58}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5694538105791348908}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &8527907569750752132
+--- !u!108 &7798519348088335319
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964444052582874004}
+  m_GameObject: {fileID: 2312720725538363264}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.06511077, g: 0.02002491, b: 0.4716981, a: 0.8784314}
+  m_Color: {r: 0.47058824, g: 0.20460412, b: 0.019607853, a: 0.8784314}
   m_Intensity: 6
   m_Range: 0.2
   m_SpotAngle: 30
@@ -94,7 +94,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &4630021168758088053
+--- !u!1 &5937956832614900262
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,42 +102,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8440264745862982466}
-  - component: {fileID: 3098433063992447639}
+  - component: {fileID: 9111452429298034310}
+  - component: {fileID: 5819935637099271372}
   m_Layer: 0
-  m_Name: Area Light (1)
+  m_Name: Area Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8440264745862982466
+--- !u!4 &9111452429298034310
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630021168758088053}
+  m_GameObject: {fileID: 5937956832614900262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.55}
+  m_LocalPosition: {x: 0, y: 0, z: -0.004}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5694538105791348908}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &3098433063992447639
+--- !u!108 &5819935637099271372
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630021168758088053}
+  m_GameObject: {fileID: 5937956832614900262}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.06511077, g: 0.02002491, b: 0.4716981, a: 0.8784314}
+  m_Color: {r: 0.47058824, g: 0.20460412, b: 0.019607853, a: 0.8784314}
   m_Intensity: 6
   m_Range: 0.2
   m_SpotAngle: 30
@@ -199,10 +199,9 @@ GameObject:
   - component: {fileID: 5694538105791348908}
   - component: {fileID: 4313132047405559352}
   - component: {fileID: 6629318900669374141}
-  - component: {fileID: 4722184128207313132}
-  - component: {fileID: 6787679530527761499}
+  - component: {fileID: 8018055941841597491}
   m_Layer: 0
-  m_Name: LazerBolt
+  m_Name: LazerBolt 1
   m_TagString: Projectiels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,8 +221,8 @@ Transform:
   m_Children:
   - {fileID: 8061895555645320833}
   - {fileID: 7020376971621882845}
-  - {fileID: 8440264745862982466}
-  - {fileID: 271236897630720942}
+  - {fileID: 472384986939068248}
+  - {fileID: 9111452429298034310}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -256,7 +255,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4722184128207313132
+--- !u!114 &8018055941841597491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,24 +264,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6076619160937445059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd70836a63443a40aa0f31b5c7468bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d91fccf971cad941a0dbf9e50452093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 241655695914125989, guid: 303e33bd38a88a2418c89a99fc89cf2e, type: 3}
-  damage: 10
---- !u!65 &6787679530527761499
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6076619160937445059}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.14902219, y: 0.17392787, z: 2.1461096}
-  m_Center: {x: 0.0006222427, y: 0.00145334, z: -0.02207289}
+  playerHealth: {fileID: 5270805980072455353, guid: 4118afa966670fb4db68f75ed60aa35a, type: 3}
+  damage: 0
 --- !u!1 &7018714504284960902
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7018714504284960902}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.024}
   m_LocalScale: {x: 0.15, y: 1, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -344,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f069a6845caa1bb48895ef33193e1c7f, type: 2}
+  - {fileID: 2100000, guid: b1129d657b9b3a74685bbe301c6a27d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -409,7 +395,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.06511077, g: 0.02002491, b: 0.4716981, a: 0.8784314}
+  m_Color: {r: 0.47058824, g: 0.20460412, b: 0.019607853, a: 0.8784314}
   m_Intensity: 6
   m_Range: 0.2
   m_SpotAngle: 30

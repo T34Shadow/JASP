@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MotherShip
   - Drones
+  - Projectiels
   layers:
   - Default
   - TransparentFX
