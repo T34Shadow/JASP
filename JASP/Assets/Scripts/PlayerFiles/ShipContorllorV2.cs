@@ -57,8 +57,12 @@ public class ShipContorllorV2 : MonoBehaviour
     [SerializeField] private float StartFOV;
     [SerializeField] private float EndFOV;
 
-    
-
+    [Header("soundsProperties")]
+    [SerializeField] private AudioSource playerFly;
+    [SerializeField] private AudioSource playerIdelFly;
+    [SerializeField] private AudioSource playerBootsFly;
+    [SerializeField] private AudioSource lazerMiniGunSound;
+  
 
 
 
@@ -73,8 +77,11 @@ public class ShipContorllorV2 : MonoBehaviour
 
         shipRigidbody = GetComponent<Rigidbody>();
 
+        playerFly = GetComponent<AudioSource>();
+        playerIdelFly = GetComponent<AudioSource>();
+        playerBootsFly = GetComponent<AudioSource>();
 
-        
+        playerBootsFly.enabled = false;
     }
 
     //using fixed update for player movement and controls
@@ -95,9 +102,14 @@ public class ShipContorllorV2 : MonoBehaviour
 
         shipVelcoity = shipRigidbody.velocity;
         //forward and break movement
-        if(forwardInput)
+        if (forwardInput)
         {
             shipRigidbody.AddForce(centerOrigin.transform.forward * forwardFactor, ForceMode.Impulse);
+            playerFly.enabled = true;
+        }
+        else
+        {
+            playerFly.enabled = false;
         }
         if (shipRigidbody.velocity.z > 0 & brakeInput)
         {
@@ -110,7 +122,13 @@ public class ShipContorllorV2 : MonoBehaviour
         if (bootsInput)
         {
             shipRigidbody.AddForce(centerOrigin.transform.forward * forwardFactor, ForceMode.Impulse);
+            playerBootsFly.enabled = true;
         }
+        else
+        {
+            playerBootsFly.enabled = false;
+        }
+       
         //pitch controll
         if (pitchUpInput)
         {
@@ -144,6 +162,7 @@ public class ShipContorllorV2 : MonoBehaviour
     // Update is called once per frame
    public void Update()
     {
+        
         
 
         //player attacking
@@ -218,7 +237,12 @@ public class ShipContorllorV2 : MonoBehaviour
             canFireLazer = false;
             GameObject cloneLazerBoltLeft = Instantiate(lazerBolt, spawnPointLazerBoltLeft.position, spawnPointLazerBoltLeft.rotation);
             GameObject cloneLazerBoltRight = Instantiate(lazerBolt, spawnPointLazerBoltRight.position, spawnPointLazerBoltRight.rotation);
+            lazerMiniGunSound.enabled = true;
                
+        }
+        else
+        {
+            lazerMiniGunSound.enabled = false;
         }
         if (shootInput & blasterCannonActive & canFireBlaster)
         {

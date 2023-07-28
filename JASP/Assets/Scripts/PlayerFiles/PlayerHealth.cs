@@ -18,7 +18,7 @@ public void TakeDamage(float amount)
         health -= amount;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Time.timeScale = 0;
             //send to death screen
         }
     }

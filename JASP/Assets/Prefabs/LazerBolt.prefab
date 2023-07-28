@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 6629318900669374141}
   - component: {fileID: 4722184128207313132}
   - component: {fileID: 6787679530527761499}
+  - component: {fileID: 34143581741118098}
   m_Layer: 0
   m_Name: LazerBolt
   m_TagString: Projectiels
@@ -283,6 +284,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14902219, y: 0.17392787, z: 2.1461096}
   m_Center: {x: 0.0006222427, y: 0.00145334, z: -0.02207289}
+--- !u!114 &34143581741118098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076619160937445059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65dd2172a8548340910fb3261a2a9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  timeBetween: 3
 --- !u!1 &7018714504284960902
 GameObject:
   m_ObjectHideFlags: 0

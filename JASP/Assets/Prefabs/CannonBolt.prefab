@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 7506981988684831617}
   - component: {fileID: 3320575412538427005}
   - component: {fileID: 1995904014223943504}
+  - component: {fileID: 2273349565488892427}
   m_Layer: 0
   m_Name: CannonBolt
   m_TagString: Projectiels
@@ -241,3 +242,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2273349565488892427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675200807118455188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65dd2172a8548340910fb3261a2a9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  timeBetween: 3

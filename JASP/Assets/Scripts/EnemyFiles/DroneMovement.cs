@@ -1,10 +1,7 @@
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEngine.TestTools;
+
 
 [RequireComponent(typeof(DroneMovement))]
 
@@ -13,6 +10,8 @@ public class DroneMovement : MonoBehaviour
 {
     [SerializeField] private Vector3 velocity;
     [SerializeField] private float radius;
+    [SerializeField] private float speed;
+
 
     [SerializeField] private float cohesionRadius;
     [SerializeField] private float cohesionForce;
